@@ -21,8 +21,12 @@ class PortfolioContainer extends Component {
           currentPage={this.state.currentPage}
           handlePageChange={this.handlePageChange}
         />
-        Based on `this.state.currentPage`, render the appropriate component
-        here.
+        {/* Based on `this.state.currentPage`, render the appropriate component
+        here. */}
+        {this.state.currentPage === "Home" ? <Home /> : ""}
+        {this.state.currentPage === "About" ? <About /> : ""}
+        {this.state.currentPage === "Blog" ? <Blog /> : ""}
+        {this.state.currentPage === "Contact" ? <Contact /> : ""}
       </div>
     );
   }
