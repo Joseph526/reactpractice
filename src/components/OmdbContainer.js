@@ -30,6 +30,11 @@ class OmdbContainer extends Component {
     });
   };
 
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.searchMovies(this.state.search);
+  };
+
   render() {
     return (
       <Container>
